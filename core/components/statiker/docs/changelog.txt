@@ -1,0 +1,5 @@
+Changelog file for Statiker.
+
+2011/05/31
+
+ * initial release

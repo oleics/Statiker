@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="statiker" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM">
+    <object class="statikerSite" table="statiker_site" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" />
+        <field key="context_key" dbtype="varchar" precision="100" phptype="string" null="false" />
+        <field key="write_to_directory" dbtype="mediumtext" phptype="string" />
+        <index alias="context_key" name="context_key" primary="false" unique="false" type="BTREE">
+            <column key="context_key" length="" collation="A" null="false" />
+        </index>
+        <aggregate alias="Context" class="modContext" key="context_key" local="context_key" foreign="key" cardinality="one" owner="foreign" />
+    </object>
+    <object class="statikerFile" table="statiker_file" extends="xPDOObject">
+        <field key="resource" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" index="pk" />
+        <field key="context_key" dbtype="varchar" precision="255" phptype="string" null="false" />
+        <field key="static_path" dbtype="text" phptype="string" null="false" default="" />
+        <field key="static_url" dbtype="text" phptype="string" null="false" default="" />
+        <field key="static_size" dbtype="int" precision="11" phptype="integer" null="false" />
+        <field key="static_size_compressed" dbtype="int" precision="11" phptype="integer" null="false" />
+        <field key="static_size_gzencoded" dbtype="int" precision="11" phptype="integer" null="false" />
+        <field key="bytes_written" dbtype="int" precision="11" phptype="integer" null="false" />
+        <field key="bytes_written_gzencoded" dbtype="int" precision="11" phptype="integer" null="false" />
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="resource" collation="A" null="false" />
+        </index>
+        <aggregate alias="Resource" class="modResource" local="resource" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Context" class="modContext" local="context_key" foreign="key" cardinality="one" owner="foreign" />
+    </object>
+</model>
