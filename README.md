@@ -1,7 +1,7 @@
 
 # Statiker
 
-## A component for MODx Revolution
+Statiker is a MODx Revolution Extra that generates static files from resources.
 
 ## System Settings / Context Settings
 
