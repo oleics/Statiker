@@ -5,12 +5,8 @@ Statiker is a MODx Revolution Extra that generates static files from resources.
 
 ## System Settings / Context Settings
 
-  * friendly_urls
-    Must be true
-
-  * site_url
-    Must be defined.
-    
+  * friendly_urls - Must be TRUE
+  * site_url - Must be defined.
   * statiker.farm_url
 
 ## Template Variables
