@@ -15,10 +15,10 @@
 
 ## Template Variables
 
-statiker.build
-statiker.compress
-statiker.gzencode
-statiker.overwrite
+  * statiker.build
+  * statiker.compress
+  * statiker.gzencode
+  * statiker.overwrite
 
 ## Development Setup
 
