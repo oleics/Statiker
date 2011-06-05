@@ -16,6 +16,13 @@ Statiker is a MODx Revolution Extra that generates static files from resources.
   * statiker.gzencode
   * statiker.overwrite
 
+## statikerSite
+
+  * id
+  * name
+  * context_key
+  * write_to_directory - examples: file:///path/to/dir/ or ftp://u:p@host/path/to/dir/
+
 ## Development Setup
 
 ### Namespace
