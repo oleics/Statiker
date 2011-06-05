@@ -1,2 +1,4 @@
+.settings
+.project
 _build/build.config.php
 config.core.php
