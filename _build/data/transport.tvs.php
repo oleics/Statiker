@@ -6,7 +6,7 @@ $tvs[1]->fromArray(array(
     'id' => 1,
     'name' => 'statiker.build',
     'caption' => 'Build',
-    'description' => 'Shall we create a file for this Resource?',
+    'description' => 'Shall we create a static file for this Resource?',
     'type' => 'option',
     'elements' => 'Yes==1||No==0',
     'default_text' => '0',
@@ -21,7 +21,7 @@ $tvs[2]->fromArray(array(
     'id' => 2,
     'name' => 'statiker.compress',
     'caption' => 'Compress',
-    'description' => '',
+    'description' => 'Compress (minify) the static file.',
     'type' => 'option',
     'elements' => 'Yes==1||No==0',
     'default_text' => '0',
@@ -36,7 +36,7 @@ $tvs[3]->fromArray(array(
     'id' => 3,
     'name' => 'statiker.gzencode',
     'caption' => 'GZip Encode',
-    'description' => '',
+    'description' => 'Create a gzip-encoded version right beside the static file.',
     'type' => 'option',
     'elements' => 'Yes==1||No==0',
     'default_text' => '0',
@@ -60,7 +60,20 @@ $tvs[4]->fromArray(array(
     'rank' => 4,
     'display_params' => '',
 ),'',true,true);
-/*
-*/
+
+$tvs[5]= $modx->newObject('modTemplateVar');
+$tvs[5]->fromArray(array(
+    'id' => 5,
+    'name' => 'statiker.rewriteonchange',
+    'caption' => 'Rewrite on change',
+    'description' => '',
+    'type' => 'option',
+    'elements' => 'Yes==1||No==0',
+    'default_text' => '1',
+    'display' => 'default',
+    'locked' => 0,
+    'rank' => 5,
+    'display_params' => '',
+),'',true,true);
 
 return $tvs;
