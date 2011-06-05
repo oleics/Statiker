@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="statiker" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM">
+    <!-- statikerSite -->
     <object class="statikerSite" table="statiker_site" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" />
         <field key="context_key" dbtype="varchar" precision="100" phptype="string" null="false" />
         <field key="write_to_directory" dbtype="mediumtext" phptype="string" />
+        <field key="write_to_url" dbtype="mediumtext" phptype="string" />
         <index alias="context_key" name="context_key" primary="false" unique="false" type="BTREE">
             <column key="context_key" length="" collation="A" null="false" />
         </index>
         <aggregate alias="Context" class="modContext" key="context_key" local="context_key" foreign="key" cardinality="one" owner="foreign" />
     </object>
+    <!-- statikerFile -->
     <object class="statikerFile" table="statiker_file" extends="xPDOObject">
         <field key="resource" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" index="pk" />
         <field key="context_key" dbtype="varchar" precision="255" phptype="string" null="false" />
