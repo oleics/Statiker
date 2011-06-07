@@ -7,8 +7,8 @@ set_time_limit(0);
 /* define package names */
 define('PKG_NAME','Statiker');
 define('PKG_NAME_LOWER','statiker');
-define('PKG_VERSION','1.0');
-define('PKG_RELEASE','alpha1');
+define('PKG_VERSION','1.0.0');
+define('PKG_RELEASE','beta1');
 define('WORKSPACE_ID', 2);
  
 /* define build paths */
