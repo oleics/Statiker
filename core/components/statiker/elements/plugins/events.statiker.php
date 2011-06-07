@@ -6,8 +6,12 @@
 $events = array();
 
 $evs = array(
-    //'OnRichTextBrowserInit',
-    'OnDocFormSave'
+    'OnDocFormSave',
+    'OnResourceDuplicate',
+    'OnDocUnPublished',
+    'OnDocPublished',
+    'OnResourceDelete',
+    'OnResourceUndelete'
 );
 
 foreach($evs as $ev) {
