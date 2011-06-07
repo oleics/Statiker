@@ -61,10 +61,11 @@ $tvs[4]->fromArray(array(
     'display_params' => '',
 ),'',true,true);
 
+/*
 $tvs[5]= $modx->newObject('modTemplateVar');
 $tvs[5]->fromArray(array(
     'id' => 5,
-    'name' => 'statiker.rewriteonchange',
+    'name' => 'statiker.rewriteonupdate',
     'caption' => 'Rewrite on change',
     'description' => '',
     'type' => 'option',
@@ -75,5 +76,6 @@ $tvs[5]->fromArray(array(
     'rank' => 5,
     'display_params' => '',
 ),'',true,true);
+*/
 
 return $tvs;
